@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
  
 @RestController
 public class WelcomeController {
- 
+ /*rq_1361 changes start*/
+ @GetMapping("/welcome")
+ /*rq_1361 changes end*/
     @Value("${var}")
     String message;
     
@@ -16,6 +18,7 @@ public class WelcomeController {
 
  
     @GetMapping("/welcome")
+	
     public String getMessage()
     {
         return "Hi "+message+message1;
